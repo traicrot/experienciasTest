@@ -1,0 +1,265 @@
+<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<title>Test</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css" type="text/css">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script src="https://use.fontawesome.com/7180696a14.js"></script>
+<script>
+
+    $.getJSON('https://experienciasxcaret.github.io/Developers/api/front.json', function(data) {
+		//console.log($.parseJSON(data));
+    $.each(data, function(a,b) {
+		$("ul#lo").append("<li>URL: "+b.id+"</li><li>Caption: "+b.seccion+"</li><br />");
+        $("#seccionTitulo").append(b.tituloH1);
+		$("#xDesc").append(b.descripcion);
+		$("#videoYT").append("<iframe width='100%' height='315' src='"+b.videoYT+"'frameborder='0' allowfullscreen></iframe>");
+		
+    });
+    
+});
+
+</script>
+
+
+</head>
+
+<body>
+	<div id="wrapper">
+        <header class="container">
+            <section id="auxNav">
+            	<div class="row">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i> Atención al Cliente</a></li>
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Acceder / Registrar</a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito</a></li>
+                        <li><a href="#">MXN - $</a></li>
+                        <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i> Idioma</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="row mainNav">
+                <div class="logo">
+                	<img src="" alt="Logotipo" class="logoPrinc">
+                    <p class="logoSlogan">Operado por <strong>Experiencias Xcaret</strong></p>
+                </div>
+                <div class="userMenu">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a></li>
+                        <li><a href="#"><i class="fa fa-camera" aria-hidden="true"></i> Mis Fotos</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li class="socialN"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+</a></li>
+                        <li class="socialN"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+</a></li>
+                        <li class="socialN"><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i>
+</a></li>
+                        <li class="socialN"><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+</a></li>
+                        <li class="socialN"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a></li>
+
+                    </ul>
+                </div>
+            </section>
+            <div class="row">
+                <nav>
+                    <ul>
+                        <li class="active" ><a href="#">Quiero</a></li>
+                        <li><a href="#">Saber Más del Parque</a></li>
+                        <li><a href="#">Comprar mi entrada...</a></li>
+                        <li><a href="#">Ahorra Más</a></li>
+                        <li><a href="#">Ver la galería de...</a></li>
+    
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section id="mainWrapper" class="container">
+            <div class="row">
+            	<section id="mainContent">
+                    <div class="breadCrumbs">
+                        <ul><li class="activeBreadcrumb">Inicio</li><li>Acerca de...</li></ul>
+                    </div>
+                    <article id="videoYT" class="contentInfo">
+                    
+                    </article>
+                   
+                   <div id="buttonsInt" class="contentInfo">
+                    <a href="#">Ver Imágenes</a>
+                    <a href="#">Vista 360ª</a>
+                   </div>
+                     
+                    <div id="introInfo" class="contentInfo">
+                    	<h1 id="seccionTitulo"></h1>
+                        <p id="xDesc">
+                        
+                        </p>
+                    </div>
+                    
+                    <div id="moreInfo" class="contentInfo">
+                    	<h2 id="atraccionTitle">Atractivos Principales</h2>
+                        <div class="atractivoRow">
+                            <div id="atraccionImage"></div>
+                            <div id="atraccionContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia felis vitae tortor pharetra pulvinar. Mauris tempor sapien et commodo interdum. Sed lacinia finibus nulla in varius. Maecenas at magna fermentum, hendrerit enim sed, commodo purus. Nunc neque erat, ultrices ac vestibulum eget, placerat sit amet magna. Aliquam libero lacus, feugiat quis neque non, aliquam vehicula felis. Aliquam pellentesque odio tellus, eu dictum turpis dapibus a. Maecenas eget convallis nisi, quis luctus dolor.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="atractivoRow">
+                            <div id="atraccionImage"></div>
+                            <div id="atraccionContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia felis vitae tortor pharetra pulvinar. Mauris tempor sapien et commodo interdum. Sed lacinia finibus nulla in varius. Maecenas at magna fermentum, hendrerit enim sed, commodo purus. Nunc neque erat, ultrices ac vestibulum eget, placerat sit amet magna. Aliquam libero lacus, feugiat quis neque non, aliquam vehicula felis. Aliquam pellentesque odio tellus, eu dictum turpis dapibus a. Maecenas eget convallis nisi, quis luctus dolor.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="atractivoRow">
+                            <div id="atraccionImage"></div>
+                            <div id="atraccionContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia felis vitae tortor pharetra pulvinar. Mauris tempor sapien et commodo interdum. Sed lacinia finibus nulla in varius. Maecenas at magna fermentum, hendrerit enim sed, commodo purus. Nunc neque erat, ultrices ac vestibulum eget, placerat sit amet magna. Aliquam libero lacus, feugiat quis neque non, aliquam vehicula felis. Aliquam pellentesque odio tellus, eu dictum turpis dapibus a. Maecenas eget convallis nisi, quis luctus dolor.</p>
+                            </div>
+                        </div>
+                        
+                                            
+                    </div>
+                    
+                    <div id="buttonCotizar" class="contentInfo">
+                    	<button class="buttonPrinc">Cotizar mi entrada ahora</button>
+                    </div>
+                </section>
+                <aside id="actionsWeb">
+                	<div class="containerActions">
+                        <h3 class="CTATitle">
+                        Compra Aquí
+                        <span>Y obtén hasta un 15% de descuento</span>
+                        </h3>
+                        <h4>Nombre del Producto</h4>
+                        <span class="precioRegular">Precio Regular <strong class="price">$0000</strong></span>
+                        <span class="precioLinea">Precio en Línea <strong class="price">$0000</strong></span>
+                        
+                        <form class="addServices">
+                            <div><input type="checkbox"><label>Agregar Transportación redonda desde tu hotel <strong>$2000</strong></label> </div>
+                            <div><input type="checkbox"><label>Agregar Foto Pase<strong>$2000</strong></label>  </div>
+                            <input type="submit" value="Comprar Ahora">
+                        </form>
+                        
+                        <div class="termsContainer">
+                            <ul>
+                                <li>*10% de descuento - reservando con 7-20 días de anticipación.</li>
+                                <li>15% de descuento -reservando con 21 días o más de anticipación.</li>
+                                <li>*Precios sujetos a cambios sin previo aviso.</li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="row">
+            
+            </div>
+        </section>
+        
+        <footer>
+        	<div class="footerNav container">
+            
+            	<div class="row">
+                	<div class="col12">
+                		<h5>experiencias Xcaret</h5>
+                    </div>
+                	<div class="col3">
+                    	<ul>
+                        	<li><img src="https://uc.uxpin.com/files/103822/110843/xcaret0.png?1468080138" alt="Xcaret"></li>
+                            <li><img src="https://uc.uxpin.com/files/103822/110843/xichen-1.png?1468080138" alt="Xixen"></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col3">
+                    	<ul>
+                        	<li><img src="https://uc.uxpin.com/files/103822/110843/xelha-1.png?1468080138" alt="Xelha"></li>
+                            <li><img src="https://uc.uxpin.com/files/103822/110843/xenotes-1.png?1468080138" alt="Xenotes"></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col3">
+                    	<ul>
+                        	<li><img src="https://uc.uxpin.com/files/103822/110843/xplor-1.png?1468080138" alt="Xplor"></li>
+                            <li><img src="https://uc.uxpin.com/files/103822/110843/xoximilco-3.png?1468080138" alt="Xoximilco"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+            
+            	<div class="row">
+                	<div class="col3">
+                    	<h6>Acerca de</h6>
+                    	<ul class="footerMenu">
+                        	<li><a href="#">Nuestra Empresa</a></li>
+                            <li><a href="#">Bolsa de Trabajo</a></li>
+                            <li><a href="#">Conoce Quintana Roo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col3">
+                    	<h6>De Interés</h6>
+                    	<ul class="footerMenu">
+                        	<li><a href="#">Afiliados</a></li>
+                            <li><a href="#">Agencias Online</a></li>
+                            <li><a href="#">Grupos</a></li>
+                            <li><a href="#">Bodas</a></li>
+                            <li><a href="#">Avión + Hotel + Transportación</a></li>
+                            <li><a href="#">Sala de Prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="col3">
+                    	<h6>Legal</h6>
+                    	<ul class="footerMenu">
+                        	<li><a href="#">Términos de uso</a></li>
+                            <li><a href="#">Aviso de Privacidad</a></li>
+                            <li><a href="#">Mapa de Sitio</a></li>
+                            <li><a href="#">Contáctanos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footerInfo container">
+				
+            	<div class="row">
+                	<div class="col12">
+                		<h6>Atención a Clientes / Ventas</h6>
+                    </div>
+                	<div class="col3">
+                    	<ul class="footerMenu">
+                        	<li>Cancún <strong>01 800 - 000 - 000</strong></li>
+                            <li>Brasil <strong>01 800 - 000 - 000</strong></li>
+                            <li>Colombia <strong>01 800 - 000 - 000</strong></li>
+                        </ul>
+                    </div>
+                    <div class="col3">
+                    	<ul class="footerMenu">
+                        	<li>Playa del Carmen <strong>01 800 - 000 - 000</strong></li>
+                            <li>Argentina <strong>01 800 - 000 - 000</strong></li>
+                            <li>España <strong>01 800 - 000 - 000</strong></li>
+                        </ul>
+                    </div>
+                    <div class="col3">
+                    	<ul class="footerMenu">
+                        	<li>USA/Canadá <strong>01 800 - 000 - 000</strong></li>
+                            <li>Venezuela <strong>01 800 - 000 - 000</strong></li>
+                            <li>Chile <strong>01 800 - 000 - 000</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="legalInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer purus neque, posuere ac accumsan quis, gravida vitae neque. <br>
+					Sed tristique mi libero, vel facilisis ipsum ultricies nec. Nulla bibendum in urna vehicula bibendum. <br>
+					©Mauris fringilla auctor vulputate. </div>
+                </div>
+            </div>
+        </footer>
+	</div>
+</body>
+</html>
